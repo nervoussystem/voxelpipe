@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+VoxelPipe
 
 = Introduction =
 
@@ -7,9 +7,8 @@ This is *VoxelPipe*, a voxelization library built in CUDA by
 
 Details about the employed algorithms are given in:
 
- * "VoxelPipe: A Programmable Pipeline for 3d Voxelization", Jacopo Pantaleoni,
-    High Performance Graphics 2011 - August 2011
-   (http://research.nvidia.com/publication/voxelpipe-programmable-pipeline-3d-voxelization)
+ * "VoxelPipe: A Programmable Pipeline for 3d Voxelization", Jacopo Pantaleoni, High Performance Graphics 2011 - August 2011
+  (http://research.nvidia.com/publication/voxelpipe-programmable-pipeline-3d-voxelization)
 
 VoxelPipe references the NIH library available at:
 http://code.google.com/p/slash-sandbox/
