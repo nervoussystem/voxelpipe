@@ -17,3 +17,7 @@ http://code.google.com/p/voxelpipe/source/browse/trunk/src/voxelpipe/voxelpipe.h
 
 The rest of the top-level src/voxelpipe directory is implementation specific,
 and is not for the weak of heart.
+
+the directory voxelpipe_test contains a minimal test program showing how to
+use the library:
+http://code.google.com/p/voxelpipe/source/browse#svn%2Ftrunk%2Fvoxelpipe_test%2Fsrc
