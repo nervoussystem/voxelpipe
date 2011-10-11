@@ -8,7 +8,7 @@ Details about the employed algorithms are given in:
  * "VoxelPipe: A Programmable Pipeline for 3d Voxelization", Jacopo Pantaleoni, High Performance Graphics 2011 - August 2011
   (http://research.nvidia.com/publication/voxelpipe-programmable-pipeline-3d-voxelization)
 
-VoxelPipe references the [http://code.google.com/p/slash-sandbox/source/browse/#svn%2Ftrunk%2F%20slash-sandbox%2Fnih NIH] library available at:
+VoxelPipe references the [http://code.google.com/p/slash-sandbox/source/browse/#svn%2Ftrunk%2F%20slash-sandbox%2Fnih nih] library available at:
 http://code.google.com/p/slash-sandbox/
 
 The main header file defining the high level API for the library is
