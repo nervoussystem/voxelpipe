@@ -39,7 +39,26 @@ struct Compact_ranges
 {
     Compact_ranges(const uint32 n);
 
-    uint32 run(int32* dest_begin, int32* dest_end, int32* dest_id, const int32* src_begin, const int32* src_end, const uint32 n);
+    /// given two arrays {b[0], b[1], ..., b[n-1]} and
+    /// {e[0], e[1], ..., e[n-1]} specifying a set of n
+    /// possibly empty ranges { [b(i),e(i)) : i = 0,...,n-1 },
+    /// return a copy of the two arrays with all the empty
+    /// ranges removed, and an array specifying their position
+    /// in the original list.
+    ///
+    /// \param dest_begin  output range start indices
+    /// \param dest_end    output range end indices
+    /// \param dest_id     output range index in the original list
+    /// \param src_begin   input range start indices
+    /// \param src_end     input range end indices
+    /// \param n           number of input elements
+    /// \result            number of output elements
+    ///
+    uint32 run(
+        int32* dest_begin, int32* dest_end, int32* dest_id,
+        const int32* src_begin,
+        const int32* src_end,
+        const uint32 n);
 
 private:
     thrust::device_vector<uint32> m_counters;

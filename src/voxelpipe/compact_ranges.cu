@@ -88,6 +88,7 @@ __forceinline__ __device__ int scan_popc(bool valid, volatile int* sm_warp_popc)
     return eidx;
 }
 
+// count the amount of output non-empty ranges in the source list
 __global__ void compact_ranges_count(
           uint32*   offsets,
     const int32*    src_begin,
@@ -150,6 +151,7 @@ __global__ void compact_ranges_count(
         offsets[ block_id ] = offset;
 }
 
+// emit the compacted list of non-empty ranges
 __global__ void compact_ranges_write(
     int32*          dest_begin,
     int32*          dest_end,
@@ -244,6 +246,21 @@ Compact_ranges::Compact_ranges(const uint32 n)
     m_offsets.resize( max_blocks );
 }
 
+// given two arrays {b[0], b[1], ..., b[n-1]} and
+// {e[0], e[1], ..., e[n-1]} specifying a set of n
+// possibly empty ranges { [b(i),e(i)) : i = 0,...,n-1 },
+// return a copy of the two arrays with all the empty
+// ranges removed, and an array specifying their position
+// in the original list.
+//
+// \param dest_begin  output range start indices
+// \param dest_end    output range end indices
+// \param dest_id     output range index in the original list
+// \param src_begin   input range start indices
+// \param src_end     input range end indices
+// \param n           number of input elements
+// \result            number of output elements
+//
 uint32 Compact_ranges::run(int32* dest_begin, int32* dest_end, int32* dest_id, const int32* src_begin, const int32* src_end, const uint32 n_elements)
 {
     const size_t max_blocks = thrust::detail::device::cuda::arch::max_active_blocks(compact::compact_ranges_count, CTA_SIZE, 0);
