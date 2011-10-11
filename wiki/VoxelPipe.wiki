@@ -1,7 +1,7 @@
 = Introduction =
 
 This is *VoxelPipe*, a voxelization library built in CUDA by
-*NVIDIA Corporation*.
+*NVIDIA Research*.
 
 Details about the employed algorithms are given in:
 
@@ -10,3 +10,9 @@ Details about the employed algorithms are given in:
 
 VoxelPipe references the NIH library available at:
 http://code.google.com/p/slash-sandbox/
+
+The main header file defining the high level API for the library is
+src/voxelpipe.h
+
+The rest of the top-level src/ directory is implementation specific,
+and is not for the weak of heart.
