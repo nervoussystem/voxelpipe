@@ -12,7 +12,8 @@ VoxelPipe references the NIH library available at:
 http://code.google.com/p/slash-sandbox/
 
 The main header file defining the high level API for the library is
-src/voxelpipe/voxelpipe.h (http://code.google.com/p/voxelpipe/source/browse/trunk/src/voxelpipe/voxelpipe.h)
+src/voxelpipe/voxelpipe.h:
+http://code.google.com/p/voxelpipe/source/browse/trunk/src/voxelpipe/voxelpipe.h
 
 The rest of the top-level src/voxelpipe directory is implementation specific,
 and is not for the weak of heart.
