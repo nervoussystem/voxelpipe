@@ -12,8 +12,6 @@ VoxelPipe references the [http://code.google.com/p/slash-sandbox/source/browse/#
 http://code.google.com/p/slash-sandbox/
 
 The main header file defining the high level API for the library is
-[http://code.google.com/p/voxelpipe/source/browse/trunk/src/voxelpipe/voxelpipe.h src/voxelpipe/voxelpipe.h].
-
-The rest of the top-level [http://code.google.com/p/voxelpipe/source/browse/#svn%2Ftrunk%2Fsrc%2Fvoxelpipe src/voxelpipe] directory is implementation specific, and is not for the weak of heart.
-
+[http://code.google.com/p/voxelpipe/source/browse/trunk/src/voxelpipe/voxelpipe.h src/voxelpipe/voxelpipe.h].<br>
+The rest of the top-level [http://code.google.com/p/voxelpipe/source/browse/#svn%2Ftrunk%2Fsrc%2Fvoxelpipe src/voxelpipe] directory is implementation specific, and is not for the weak of heart.<br>
 The [http://code.google.com/p/voxelpipe/source/browse#svn%2Ftrunk%2Fvoxelpipe_test%2Fsrc voxelpipe_test] subdirectory contains a minimal test program showing how to use the library.
